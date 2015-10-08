@@ -1,0 +1,19 @@
+﻿<Application
+    x:Class="OltivaHotel.Store.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OltivaHotel.Store"
+    xmlns:vm="using:OltivaHotel.Store.ViewModel"
+    xmlns:common="using:OltivaHotel.Store.Common">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <vm:ViewModelLocator x:Key="Locator" />
+            <common:VisibilityConverter x:Key="VisibilityConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common/CustomStyles.xaml" />
+                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

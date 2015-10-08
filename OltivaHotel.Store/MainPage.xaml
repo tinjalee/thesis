@@ -1,0 +1,161 @@
+﻿<Page
+    x:Class="OltivaHotel.Store.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OltivaHotel.Store"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Page.Resources>
+        <!--<CollectionViewSource x:Name="GroupedMenuItems" Source="{Binding MenuGroups}" ItemsPath="MenuItems" IsSourceGrouped="True" d:DataContext="{Binding MenuGroups}"/>-->
+    </Page.Resources>
+
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" VerticalAlignment="Bottom" FontSize="56" FontFamily="Segoe UI Light" Margin="0,0,0,40">
+            <Run Text="oltiva" Foreground="{StaticResource OltivaForegroundBrush}" FontWeight="SemiBold" FontFamily="Segoe UI Semibold" />
+            <Run Text="hotel" Foreground="{StaticResource OltivaAccentBrush}" />
+        </TextBlock>
+        <Grid x:Name="ContentGrid" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border Background="{StaticResource OltivaAccentBrush}" Padding="20" Margin="0,0,0,90">
+                <StackPanel >
+                    <TextBlock Text="reception" FontSize="28" Foreground="{StaticResource WhiteBrush}" FontFamily="Segoe UI Semibold" />
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0" >
+                        <StackPanel>
+                            <TextBlock Text="Mon-Sun: 6am-11pm" FontSize="14.67" FontFamily="Segoe UI Semilight"  Foreground="{StaticResource WhiteBrush}"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <StackPanel>
+                            <HyperlinkButton Content="+358 20 123 456" HorizontalAlignment="Left" Foreground="{StaticResource WhiteBrush}"
+                                         HorizontalContentAlignment="Left" Padding="0" Margin="0,0,0,10"
+                                         Click="CallReceptionClick" />
+                            <HyperlinkButton Content="reception@oltivahotels.com" HorizontalAlignment="Left" Foreground="{StaticResource WhiteBrush}"
+                                         HorizontalContentAlignment="Left" Padding="0" Margin="0,1,0,0"
+                                         Click="EmailReceptionClick" />
+                        </StackPanel>
+                    </StackPanel>
+                    <TextBlock Text="roomservice" FontSize="28" Margin="0,24,0,0"  Foreground="{StaticResource WhiteBrush}" FontFamily="Segoe UI Semibold"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <StackPanel >
+                            <TextBlock Text="Mon-Sun: 4:30am-12am" FontSize="14.67" FontFamily="Segoe UI Semilight" Foreground="{StaticResource WhiteBrush}"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <StackPanel>
+                            <HyperlinkButton Content="+358 464 864 79" HorizontalAlignment="Left"
+                                         HorizontalContentAlignment="Left" Padding="0" Margin="0,0,0,10"
+                                         Foreground="{StaticResource WhiteBrush}"
+                                         Click="CallRoomServiceClick" />
+                            <HyperlinkButton Content="roomservice@oltivahotels.com"
+                                         HorizontalAlignment="Left" HorizontalContentAlignment="Left" Padding="0"
+                                         Margin="0,0,0,0" Foreground="{StaticResource WhiteBrush}"
+                                         Click="EmailReceptionClick" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            
+                <Grid Grid.Column="1" Margin="80,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid Width="250" Grid.Column="0" Margin="0,20,0,0">
+                        <StackPanel>
+                            <TextBlock Text="breakfast" FontSize="28" Foreground="{StaticResource ForegroundBrush}" FontFamily="Segoe UI Semibold" />
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,20" >
+                                <StackPanel>
+                                    <TextBlock Text="Mon-Sun: 4:30am-11am" FontSize="14.67" FontFamily="Segoe UI Semilight"  Foreground="{StaticResource ForegroundBrush}"/>
+                                    <Button Command="{Binding MenuClickCommand}" CommandParameter="breakfast" Style="{StaticResource TextPrimaryButtonStyle}" 
+                                            Padding="12,12,12,4" Margin="0,10,0,0" Width="230" Click="MenuNavigationClicked">
+                                        <StackPanel Orientation="Horizontal" Background="{StaticResource SemiTransparentAccentBrush}">
+                                            <TextBlock Text="breakfast menu" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                            <TextBlock Text=" &gt;&gt;" FontFamily="Segoe UI Symbol" Margin="0,-7,0,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </StackPanel>
+                            <TextBlock Text="lunch" FontSize="28" Foreground="{StaticResource ForegroundBrush}" FontFamily="Segoe UI Semibold" />
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,20" >
+                                <StackPanel>
+                                    <TextBlock Text="Mon-Sun: 10:30am-2pm" FontSize="14.67" FontFamily="Segoe UI Semilight"  Foreground="{StaticResource ForegroundBrush}"/>
+                                    <Button Command="{Binding MenuClickCommand}" CommandParameter="lunch" Style="{StaticResource TextPrimaryButtonStyle}" Padding="12,12,12,4" Margin="0,10,0,0" Width="230"
+                                             Click="MenuNavigationClicked">
+                                        <StackPanel Orientation="Horizontal" Background="{StaticResource SemiTransparentAccentBrush}">
+                                            <TextBlock Text="lunch menu" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                            <TextBlock Text=" &gt;&gt;" FontFamily="Segoe UI Symbol" Margin="0,-7,0,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </StackPanel>
+                            <TextBlock Text="dinner" FontSize="28" Foreground="{StaticResource ForegroundBrush}" FontFamily="Segoe UI Semibold" />
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,20" >
+                                <StackPanel>
+                                    <TextBlock Text="Mon-Sun: 4:30pm-11:30pm" FontSize="14.67" FontFamily="Segoe UI Semilight"  Foreground="{StaticResource ForegroundBrush}"/>
+                                    <Button Command="{Binding MenuClickCommand}" CommandParameter="dinner" Style="{StaticResource TextPrimaryButtonStyle}" Padding="12,12,12,4" Margin="0,10,0,0" Width="230"
+                                             Click="MenuNavigationClicked">
+                                        <StackPanel Orientation="Horizontal" Background="{StaticResource SemiTransparentAccentBrush}">
+                                            <TextBlock Text="dinner menu" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                            <TextBlock Text=" &gt;&gt;" FontFamily="Segoe UI Symbol" Margin="0,-7,0,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </StackPanel>
+                            <Button Command="{Binding MenuClickCommand}" Style="{StaticResource TextPrimaryButtonStyle}" Padding="12,12,12,4" Margin="0,45,0,0" Width="230"
+                                     Click="MenuNavigationClicked">
+                                <StackPanel Orientation="Horizontal" Background="{StaticResource SemiTransparentAccentBrush}">
+                                    <TextBlock Text="whole menu" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                    <TextBlock Text=" &gt;&gt;" FontFamily="Segoe UI Symbol" Margin="0,-7,0,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+
+                    </Grid>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="60,20,0,0" VerticalAlignment="Top">
+                        <TextBlock Text="Today's special" Margin="3,-7,10,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                        <TextBlock Text="{StaticResource ChevronGlyph}" FontFamily="Segoe UI Symbol" Margin="0,-7,0,10" Style="{StaticResource GroupHeaderTextStyle}" Foreground="{StaticResource ForegroundBrush}"/>
+                    </StackPanel>
+                    <GridView Grid.Column="1" Foreground="{StaticResource ForegroundBrush}"
+                    ScrollViewer.IsHorizontalScrollChainingEnabled="False" 
+                              x:Name="TodaysSpecialGridView"
+                    Padding="60,55,0,90"
+                    ItemsSource="{Binding Menu.MenuItems}"
+                    ItemTemplate="{StaticResource MenuItemTemplate}"
+                    SelectionMode="None">
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VariableSizedWrapGrid Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                    </GridView>
+                </Grid>
+        </Grid>
+        <Grid x:Name="PopupGrid" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="{StaticResource DisabledBrush}" Visibility="Collapsed">
+            <Grid Height="200" Background="{StaticResource OltivaAccentBrush}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel>
+                        <TextBlock Text="Add to order:" Margin="0,20,0,10" FontSize="20" Foreground="{StaticResource WhiteBrush}"></TextBlock>
+                        <ContentPresenter ContentTemplate="{StaticResource OrderListItemTemplate}" Content="{Binding ElementName=TodaysSpecialGridView, Path=SelectedItem}"
+                                          Foreground="{StaticResource WhiteBrush}"/>
+                    </StackPanel>
+                    <Button Content="Add" VerticalAlignment="Bottom" Width="120" Foreground="{StaticResource WhiteBrush}" BorderBrush="{StaticResource WhiteBrush}" Click="AddClick" Command="{Binding AddToOrder}" CommandParameter="{Binding ElementName=TodaysSpecialGridView, Path=SelectedItem}"></Button>
+                    <Button Content="Cancel" VerticalAlignment="Bottom"  Width="120" Foreground="{StaticResource WhiteBrush}" BorderBrush="{StaticResource WhiteBrush}" Click="CancelClick"></Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

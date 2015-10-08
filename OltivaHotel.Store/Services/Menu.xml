@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<menu xmlns:ns1="http://tempuri.org/MenuSchema.xsd">
+  <meal>
+    <type>all day dining</type>
+    <name>Roast beef sandwhich</name>
+    <price>15.00</price>
+    <description>honey oat bread / roast beef cuts / fresh lettuce / tomatoes / pickles / cheddar cheese / special sauce</description>
+    <special />
+  </meal>
+  <meal>
+    <type>all day dining</type>
+    <name>Turkey sandwhich</name>
+    <price>15.00</price>
+    <description>honey oat bread / turkey cuts / fresh lettuce / tomatoes / pickles / cheddar cheese / special sauce</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>all day dining</type>
+    <name>Salmon sandwhich</name>
+    <price>15.00</price>
+    <description>honey oat bread / smoked salmon / fresh lettuce / tomatoes / cranberry jam / cream cheese / special sauce</description>
+    <special />
+  </meal>
+  <meal>
+    <type>all day dining</type>
+    <name>Vegetable sandwhich</name>
+    <price>15.00</price>
+    <description>honey oat bread / grilled tofu / fresh lettuce / tomatoes / pickles / soya cheese / special sauce</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>all day dining</type>
+    <name>Roast beef salad</name>
+    <price>15.00</price>
+    <description>roast beef cuts / fresh lettuce / tomatoes / pickles / cheddar cheese / special dressing</description>
+    <special />
+  </meal>
+  <meal>
+    <type>all day dining</type>
+    <name>Turkey salad</name>
+    <price>15.00</price>
+    <description>turkey cuts / fresh lettuce / tomatoes / pickles / cheddar cheese / special dressing</description>
+    <special />
+  </meal>
+  <meal>
+    <type>all day dining</type>
+    <name>Salmon salad</name>
+    <price>15.00</price>
+    <description>smoked salmon / fresh lettuce / tomatoes / cranberry jam / cream cheese / special dressing</description>
+    <special />
+  </meal>
+  <meal>
+    <type>all day dining</type>
+    <name>Vegetable salad</name>
+    <price>15.00</price>
+    <description>grilled tofu / fresh lettuce / tomatoes / pickles / soya cheese / special dressing</description>
+    <special />
+  </meal>
+  <meal>
+    <type>breakfast</type>
+    <name>The American</name>
+    <price>20.00</price>
+    <description>two eggs as you like / toasted bread / smoked ham / crispy bacon / mini sausages / juice or coffee</description>
+    <special />
+  </meal>
+  <meal>
+    <type>breakfast</type>
+    <name>The English</name>
+    <price>20.00</price>
+    <description>two eggs as you like / english muffins / mini sausages / grilled tomatoes / fried mushrooms / toasted bread with butter / baked beans / juice, tea or coffee</description>
+    <special />
+  </meal>
+  <meal>
+    <type>breakfast</type>
+    <name>The European</name>
+    <price>20.00</price>
+    <description>gouda and cheddar cheese / croisants / cereal / cold cut ham and turkey / waffles / fruit bowl / juice, tea or coffee</description>
+    <special />
+  </meal>
+  <meal>
+    <type>breakfast</type>
+    <name>The Brazilian</name>
+    <price>20.00</price>
+    <description>cheese buns / cereal / papayas and pineapples / fruit juice / tea, coffee or hot chocolate</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>breakfast</type>
+    <name>The Mexican</name>
+    <price>20.00</price>
+    <description>large fruit bowl / organic flavorless yoghurt / variety of nuts / eggs with vegetables / chilaquiles / baked beans / guacamole / sweet bread / coffee or chocolate milk</description>
+    <special />
+  </meal>
+  <meal>
+    <type>breakfast</type>
+    <name>Light morning</name>
+    <price>15.00</price>
+    <description>large variety of the seasonal fruits  / non-fat yoghurt / nuts / juice, tea or coffee</description>
+    <special />
+  </meal>
+  <meal>
+    <type>breakfast</type>
+    <name>Off the menu</name>
+    <price />
+    <description>Please contact the room service by phone to order off the menu</description>
+    <special />
+  </meal>
+  <meal>
+    <type>lunch</type>
+    <name>Sushi</name>
+    <price>25.00</price>
+    <description>Daily variety of fresh sushi / 6 maki / 8 nigiri</description>
+    <special />
+  </meal>
+  <meal>
+    <type>lunch</type>
+    <name>Grilled chicken breast</name>
+    <price>22.00</price>
+    <description>Grilled chicken breast / fresh salad / coleslaw</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>lunch</type>
+    <name>Grilled stirloin steak</name>
+    <price>30.00</price>
+    <description>Grilled stirloin steak / fresh salad / coleslaw / A1 sauce on the side</description>
+    <special />
+  </meal>
+  <meal>
+    <type>lunch</type>
+    <name>Pasta carbonara</name>
+    <price>20.00</price>
+    <description>Tagliatelle pasta / carbonara sauce / egg / ham</description>
+    <special />
+  </meal>
+  <meal>
+    <type>lunch</type>
+    <name>Grilled pork ribs</name>
+    <price>30.00</price>
+    <description>Grilled pork ribs / fresh salad</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dinner</type>
+    <name>Sushi</name>
+    <price>35.00</price>
+    <description>For startes: Miso soup, seaweed salad / Entree: Daily variety of fresh sushi, 8 maki, 10 nigiri</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dinner</type>
+    <name>Grilled chicken breast</name>
+    <price>30.00</price>
+    <description>For startes: Tomato soup with carlic bread / Entree: Grilled chicken breast  with fresh salad and coleslaw</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dinner</type>
+    <name>Grilled stirloin steak</name>
+    <price>45.00</price>
+    <description>For starters: roasted snails in parmesan / Entree: grilled stirloin steak with fresh salad, coleslaw and A1 sauce on the side</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>dinner</type>
+    <name>Pasta carbonara</name>
+    <price>30.00</price>
+    <description>For starters: garlic bread with cheese platter / Entree: Tagliatelle pasta in carbonara sauce with ham and an egg</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dinner</type>
+    <name>Grilled pork ribs</name>
+    <price>45.00</price>
+    <description>For starters: Spinach salad with strawberries, goat cheese and cucumber / Entree: grilled pork ribs with fresh salad</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dessert</type>
+    <name>Ice cream cupcakes</name>
+    <price>10.00</price>
+    <description>Fresh cupcakes with ice cream frosting</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dessert</type>
+    <name>Blueberry cheesecake</name>
+    <price>10.00</price>
+    <description>New York style cheese cake with blueberry sauce</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>dessert</type>
+    <name>Butterscotch pudding</name>
+    <price>10.00</price>
+    <description>Butterscotch pudding with raspberries on the side</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dessert</type>
+    <name>Berries and mascarpone</name>
+    <price>10.00</price>
+    <description>Berries and mascarpone cheese</description>
+    <special />
+  </meal>
+  <meal>
+    <type>red wine</type>
+    <name>Shafter</name>
+    <price>50.00</price>
+    <description>2004, Merlot, Napa Valley (USA, California)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>red wine</type>
+    <name>Côtes du Rhône</name>
+    <price>55.00</price>
+    <description>2011, Domaine de la Janasse (France, Rhône Valley)</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>red wine</type>
+    <name>Egri Bikavér</name>
+    <price>60.00</price>
+    <description>2008, Egri Korona Borház, Eger (Hungary)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>red wine</type>
+    <name>Saint-Joseph</name>
+    <price>70.00</price>
+    <description>2006, Le Clos, Domaine Florentin (France, Rhône Valley)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>white wine</type>
+    <name>Eradus</name>
+    <price>60.00</price>
+    <description>2011, Savignon Blanc, Marlborough (New Zealand, South Island)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>white wine</type>
+    <name>Casa Marin</name>
+    <price>65.00</price>
+    <description>2010, Riesling, Miramar Vineyard, Lo Abarca (Chile, San Antionio Valley)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>white wine</type>
+    <name>Bourgogne Aligoté</name>
+    <price>100.00</price>
+    <description>2008, Domaine Coche-Dury (France, Burgundy)</description>
+    <special>true</special>
+  </meal>
+  <meal>
+    <type>white wine</type>
+    <name>Falanghina</name>
+    <price>100.00</price>
+    <description>2009, Via del Campo, Quitodecimo (Italy, Campania)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dessert wine</type>
+    <name>Maury</name>
+    <price>60.00</price>
+    <description>2011, Domaine Pouderoux (France, Languedoc-Roussillon)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dessert wine</type>
+    <name>Visanto</name>
+    <price>80.00</price>
+    <description>2004, Siglas, Santorini (Greece)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dessert wine</type>
+    <name>Grand Roussillon</name>
+    <price>400.00</price>
+    <description>1940, Domaine Puig Parahy (France, Laguedoc-Roussillon)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>dessert wine</type>
+    <name>Riesling Trockenbeerenauslese</name>
+    <price>2500.00</price>
+    <description>2005, Scharzhofberger, Egon Müller (Germany, Mosel)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>champagne</type>
+    <name>Prosecco</name>
+    <price>60.00</price>
+    <description>2004, Riondo, Veneto (Italy)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>champagne</type>
+    <name>Geoffroy</name>
+    <price>100.00</price>
+    <description>2002, Expression, Brut (France)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>champagne</type>
+    <name>Gusbourne Estate</name>
+    <price>120.00</price>
+    <description>2007, Blanc de Blancs, Appledore (England, Kent)</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Pure squeezed orange juice</name>
+    <price>10.00</price>
+    <description>Pure squeezed orange juice</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Pure squeezed grape fruit juice</name>
+    <price>10.00</price>
+    <description>Pure squeezed grape fruit juice</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Tomato juice</name>
+    <price>8.00</price>
+    <description>Tomato juice</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Pine apple juice</name>
+    <price>8.00</price>
+    <description>Pineapple juice</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Cranberry juice</name>
+    <price>8.00</price>
+    <description>Cranberry juice</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Mineral water</name>
+    <price>8.00</price>
+    <description>Mineral water</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Glass of milk</name>
+    <price>6.00</price>
+    <description>Glass of milk</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Hot chocolate</name>
+    <price>8.00</price>
+    <description>Hot chocolate</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Freshly brewed coffee</name>
+    <price>8.00</price>
+    <description>Freshly brewed coffee</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Tea</name>
+    <price>8.00</price>
+    <description>Tea</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Cola soda</name>
+    <price>8.00</price>
+    <description>Cola soda</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Orange soda</name>
+    <price>8.00</price>
+    <description>Orange soda</description>
+    <special />
+  </meal>
+  <meal>
+    <type>beverages</type>
+    <name>Lemon soda</name>
+    <price>8.00</price>
+    <description>Lemon soda</description>
+    <special />
+  </meal>
+  <meal>
+    <type>spirits</type>
+    <name>Cocktails and spirits</name>
+    <price />
+    <description>Contact room service by phone</description>
+    <special />
+  </meal>
+</menu>

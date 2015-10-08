@@ -1,0 +1,160 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    x:Class="OltivaHotel.WP.MainPage"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <phone:Panorama TitleTemplate="{StaticResource OltivaTitleTemplatePanorama}"
+                    Background="{StaticResource BackgroundBrush}">
+        <phone:PanoramaItem Header="welcome" Foreground="{StaticResource ForegroundBrush}">
+            <StackPanel Margin="12,0,0,0">
+                <TextBlock Text="reception" FontSize="28" />
+                <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                    <TextBlock Text="Open:" Width="100" />
+                    <StackPanel Width="300">
+                        <TextBlock Text="Mon-Sun: 6am-11pm" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,24,0,0">
+                    <TextBlock Text="Contact:" Width="100" />
+                    <StackPanel Width="300">
+                        <HyperlinkButton Content="+358 20 123 456" FontSize="20" HorizontalAlignment="Left"
+                                         HorizontalContentAlignment="Left" Padding="0" Margin="0,0,0,12"
+                                         Click="CallReceptionClick" />
+                        <HyperlinkButton Content="reception@oltivahotels.com" FontSize="20" HorizontalAlignment="Left"
+                                         HorizontalContentAlignment="Left" Padding="0" Margin="0,6,0,0"
+                                         Click="EmailReceptionClick" />
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock Text="roomservice" FontSize="28" Margin="0,24,0,0" />
+                <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                    <TextBlock Text="Open:" Width="100" />
+                    <StackPanel Width="300">
+                        <TextBlock Text="Mon-Sun: 4:30am-12am" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBlock Text="Contact:" Width="100" Margin="0,4,0,0" />
+                    <StackPanel Width="300">
+                        <HyperlinkButton Content="+358 464 864 79" FontSize="20" HorizontalAlignment="Left"
+                                         HorizontalContentAlignment="Left" Padding="0" Margin="0,0,0,12" Width="295"
+                                         Height="30"
+                                         Click="CallRoomServiceClick" />
+                        <HyperlinkButton Content="roomservice@oltivahotels.com" FontSize="20"
+                                         HorizontalAlignment="Left" HorizontalContentAlignment="Left" Padding="0"
+                                         Margin="0,6,0,0"
+                                         Click="EmailReceptionClick" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </phone:PanoramaItem>
+        <phone:PanoramaItem Header="in-room dining" Foreground="{StaticResource ForegroundBrush}">
+            <ScrollViewer MaxHeight="500" Margin="12,0,0,0">
+                <StackPanel>
+                    <TextBlock Text="breakfast" FontSize="28" />
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,12">
+                        <TextBlock Text="Served:" Width="100" />
+                        <StackPanel Width="300">
+                            <TextBlock Text="Mon-Sun: 4:30am-11am" />
+                            <HyperlinkButton Content="breakfast menu &gt;&gt;" Height="32"
+                                             Command="{Binding MenuClickCommand}"
+                                             CommandParameter="breakfast"
+                                             HorizontalAlignment="Left">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <ec:NavigateToPageAction TargetPage="/MenuPage.xaml" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </HyperlinkButton>
+                        </StackPanel>
+                    </StackPanel>
+                    <TextBlock Text="lunch" FontSize="28" />
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,12">
+                        <TextBlock Text="Served:" Width="100" />
+                        <StackPanel Width="300">
+                            <TextBlock Text="Mon-Sun: 10:30am-2pm" />
+                            <HyperlinkButton Content="lunch menu &gt;&gt;" Height="32"
+                                             Command="{Binding MenuClickCommand}"
+                                             CommandParameter="lunch"
+                                             HorizontalAlignment="Left">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <ec:NavigateToPageAction TargetPage="/MenuPage.xaml" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </HyperlinkButton>
+                        </StackPanel>
+                    </StackPanel>
+                    <TextBlock Text="dinner" FontSize="28" />
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,36">
+                        <TextBlock Text="Served:" Width="100" />
+                        <StackPanel Width="300">
+                            <TextBlock Text="Mon-Sun: 4:30pm-11:30pm" />
+                            <HyperlinkButton Content="dinner menu &gt;&gt;" Height="32"
+                                             Command="{Binding MenuClickCommand}"
+                                             CommandParameter="dinner"
+                                             HorizontalAlignment="Left">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <ec:NavigateToPageAction TargetPage="/MenuPage.xaml" />
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </HyperlinkButton>
+                        </StackPanel>
+                    </StackPanel>
+                    <HyperlinkButton Content="whole menu &gt;&gt;" Height="32" FontSize="28"
+                                     HorizontalAlignment="Left">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <ec:NavigateToPageAction TargetPage="/MenuPage.xaml" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </HyperlinkButton>
+                </StackPanel>
+            </ScrollViewer>
+        </phone:PanoramaItem>
+        <phone:PanoramaItem Header="today's special" Foreground="{StaticResource ForegroundBrush}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ListBox x:Name="DailySpecialList" ItemsSource="{Binding Menu.MenuItems}" Margin="12,0,0,12"
+                         Padding="0,0,12,0" ItemTemplate="{StaticResource DailySpecialItemTemplate}"
+                         Foreground="{StaticResource ForegroundBrush}" />
+                <Button Grid.Row="1" Content="Add to order" Width="200" HorizontalAlignment="Right" Margin="0,0,-12,0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding AddToOrder}"
+                                                   CommandParameter="{Binding Path=SelectedItem, ElementName=DailySpecialList}" />
+                            <ec:NavigateToPageAction TargetPage="/OrderPage.xaml" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </Grid>
+        </phone:PanoramaItem>
+    </phone:Panorama>
+
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Minimized" Opacity="1" 
+                              ForegroundColor="#FFEEEEEE" 
+                              BackgroundColor="{StaticResource OltivaGray}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/next.png" Text="order"
+                                                Click="GoToOrderPage"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
